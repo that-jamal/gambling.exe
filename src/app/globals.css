@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: rgb(185,0,0);
+  --background: radial-gradient(circle, rgb(48, 0, 0) 7%, rgb(63, 63, 63) 86%);
+  --foreground:  rgb(185,0,0);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: rgb(185,0,0);
+    --background: radial-gradient(circle, rgba(185,0,0,1) 7%, rgba(0,0,0,1) 86%);
+    --foreground:rgb(185,0,0);
   }
 }
 

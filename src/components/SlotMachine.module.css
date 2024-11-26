@@ -1,0 +1,142 @@
+/* Container for the slot machine */
+.slotMachine {
+    width: 70%;
+    height: 70vh;
+    /* 70% of the viewport height */
+    margin: 0 auto;
+    background: #333;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: #333;
+    
+}
+
+/* Lever styles */
+.lever {
+    
+    width: 40px;
+    /* Increase lever width */
+    height: 250px;
+    /* Increase lever height */
+    background: rgb(185,0,0);
+    background: radial-gradient(circle, rgb(95, 93, 93) 7%, rgb(141, 140, 140) 86%);
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    /* Adjust position for the larger lever */
+    transform: translateY(-50%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.lever:before {
+    content: '';
+    width: 80px;
+    /* Increase knob size */
+    height: 80px;
+    background: rgb(185,0,0);
+    background: radial-gradient(circle, rgb(27, 19, 19) 7%, rgb(87, 2, 2) 86%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Lever active animation */
+.lever.active {
+    transform: translateX(-90%) rotate(-50deg);
+   
+}
+.reelbord{
+    border-radius: 13px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    background-image:url(https://media1.tenor.com/m/M6WgkbXFHjwAAAAC/casino-oldpeople.gif);
+}
+.reel {
+    
+    font-size: 8rem;
+    /* Larger font for symbols */
+    width: 150px;
+    /* Larger reel width */
+    height: 150px;
+    /* Larger reel height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    margin: 0 1.5rem;
+    border: 4px solid #ddd;
+    position: relative;
+    
+}
+
+.reel.spinning {
+   
+    animation: spinReel 0.3s linear infinite;
+}
+
+
+
+.info {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.reels {
+    display: flex;
+    justify-content: center;
+
+}
+
+.message {
+    color: rgb(255, 255, 255);
+    font-size: 3.2rem;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.outOfCoins {
+    color: red;
+    font-size: 1.2rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: red;
+}
+
+.button:active {
+    background-color: #003f7f;
+}

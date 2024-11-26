@@ -1,0 +1,38 @@
+.reel {
+  font-size: 2rem;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  color: black;
+  border-radius: 10px;
+  
+  margin: 0 0.5rem;
+  border: 5px solid #c70000;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+.reel.spinning {
+  animation: spinReel 0.3s linear infinite;
+}
+
+@keyframes spinReel {
+  0% { 
+    transform: rotateX(0deg); 
+  transform: translateY(-200px);}
+
+
+ 50% { transform: rotateX(50deg); }
+
+
+  100% { 
+    
+       transform: rotateX(90deg);
+       transform: translateY(700px);
+       }
+}
